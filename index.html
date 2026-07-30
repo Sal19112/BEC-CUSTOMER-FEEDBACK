@@ -196,7 +196,7 @@
   .chips button:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}
   .nps{
     display:grid;
-    grid-template-columns:repeat(6,1fr);
+    grid-template-columns:repeat(5,1fr);
     gap:8px;
   }
   .nps button{
@@ -359,7 +359,7 @@
     <div class="field">
       <label class="label" data-i18n="q6nps">&#128202; 6. How likely are you to recommend us to a friend or colleague?</label>
       <div class="nps" id="npsGrid" role="radiogroup" aria-label="Recommendation likelihood 0 to 10"></div>
-      <div class="rate-hint" data-i18n="npsHint">0 = Not at all likely &middot; 10 = Extremely likely</div>
+      <div class="rate-hint" data-i18n="npsHint">1 = Not at all likely &middot; 10 = Extremely likely</div>
     </div>
 
     <div class="field">
@@ -408,7 +408,7 @@ const I18N = {
     q5: "\u{1F44D} 5. Would you recommend us to your family and friends?",
     q6: "\u{1F4AC} 7. How can we improve our service?",
     q6nps: "\u{1F4CA} 6. How likely are you to recommend us to a friend or colleague?",
-    npsHint: "0 = Not at all likely · 10 = Extremely likely",
+    npsHint: "1 = Not at all likely · 10 = Extremely likely",
     optional: "(optional)",
     improvePh: "Your suggestions...",
     tapToRate: "Tap to rate",
@@ -447,7 +447,7 @@ const I18N = {
     q5: "\u{1F44D} 5. هل تنصح عائلتك وأصدقاءك بالتعامل معنا؟",
     q6: "\u{1F4AC} 7. كيف يمكننا تحسين خدمتنا؟",
     q6nps: "\u{1F4CA} 6. ما مدى احتمال أن توصي بنا صديقاً أو زميلاً؟",
-    npsHint: "0 = غير محتمل إطلاقاً · 10 = محتمل جداً",
+    npsHint: "1 = غير محتمل إطلاقاً · 10 = محتمل جداً",
     optional: "(اختياري)",
     improvePh: "اقتراحاتكم...",
     tapToRate: "اضغط للتقييم",
@@ -486,7 +486,7 @@ const I18N = {
     q5: "\u{1F44D} 5. क्या आप अपने परिवार और दोस्तों को हमारी सिफारिश करेंगे?",
     q6: "\u{1F4AC} 7. हम अपनी सेवा कैसे बेहतर बना सकते हैं?",
     q6nps: "\u{1F4CA} 6. आप हमें किसी मित्र या सहकर्मी को सुझाने की कितनी संभावना रखते हैं?",
-    npsHint: "0 = बिल्कुल नहीं · 10 = पूरी संभावना",
+    npsHint: "1 = बिल्कुल नहीं · 10 = पूरी संभावना",
     optional: "(वैकल्पिक)",
     improvePh: "आपके सुझाव...",
     tapToRate: "रेट करने के लिए टैप करें",
@@ -525,7 +525,7 @@ const I18N = {
     q5: "\u{1F44D} 5. আপনি কি পরিবার ও বন্ধুদের আমাদের কথা বলবেন?",
     q6: "\u{1F4AC} 7. আমরা কীভাবে আমাদের সেবা আরও ভালো করতে পারি?",
     q6nps: "\u{1F4CA} 6. আপনি কোনো বন্ধু বা সহকর্মীকে আমাদের সুপারিশ করার সম্ভাবনা কতটা?",
-    npsHint: "0 = একেবারেই না · 10 = খুবই সম্ভব",
+    npsHint: "1 = একেবারেই না · 10 = খুবই সম্ভব",
     optional: "(ঐচ্ছিক)",
     improvePh: "আপনার পরামর্শ...",
     tapToRate: "রেট করতে ট্যাপ করুন",
@@ -564,7 +564,7 @@ const I18N = {
     q5: "\u{1F44D} 5. ඔබේ පවුලේ අයට සහ මිතුරන්ට අපව නිර්දේශ කරනවාද?",
     q6: "\u{1F4AC} 7. අපේ සේවාව වැඩිදියුණු කරන්නේ කෙසේද?",
     q6nps: "\u{1F4CA} 6. මිතුරෙකුට හෝ සගයෙකුට අපව නිර්දේශ කිරීමට ඔබ කොතරම් ඉඩ තිබේද?",
-    npsHint: "0 = කිසිසේත් නැත · 10 = ඉතා ඉඩ ඇත",
+    npsHint: "1 = කිසිසේත් නැත · 10 = ඉතා ඉඩ ඇත",
     optional: "(අත්‍යවශ්‍ය නොවේ)",
     improvePh: "ඔබේ යෝජනා...",
     tapToRate: "ඇගයීමට තට්ටු කරන්න",
@@ -712,7 +712,7 @@ function relabelChips(){
 /* ---------- NPS 0-10 ---------- */
 let npsValue = -1;
 const npsGrid = document.getElementById("npsGrid");
-for(let i = 0; i <= 10; i++){
+for(let i = 1; i <= 10; i++){
   const b = document.createElement("button");
   b.type = "button";
   b.textContent = i;
@@ -806,7 +806,7 @@ form.addEventListener("submit", async (e) => {
     err.textContent = t("errChips");
     return;
   }
-  if(npsValue < 0){
+  if(npsValue < 1){
     err.textContent = t("errNps");
     return;
   }
