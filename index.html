@@ -351,19 +351,15 @@
       <div class="chips" id="visitChips" role="radiogroup" aria-label="Visit again"></div>
     </div>
 
-    <div class="field">
-      <label class="label" data-i18n="q5">&#128077; 5. Would you recommend us to your family and friends?</label>
-      <div class="chips" id="recommendChips" role="radiogroup" aria-label="Recommend us"></div>
-    </div>
 
     <div class="field">
-      <label class="label" data-i18n="q6nps">&#128202; 6. How likely are you to recommend us to a friend or colleague?</label>
+      <label class="label" data-i18n="q6nps">&#128202; 5. How likely are you to recommend us to a friend or colleague?</label>
       <div class="nps" id="npsGrid" role="radiogroup" aria-label="Recommendation likelihood 0 to 10"></div>
       <div class="rate-hint" data-i18n="npsHint">1 = Not at all likely &middot; 10 = Extremely likely</div>
     </div>
 
     <div class="field">
-      <label class="label"><span data-i18n="q6">&#128172; 7. How can we improve our service?</span> <span class="opt" data-i18n="optional">(optional)</span></label>
+      <label class="label"><span data-i18n="q6">&#128172; 6. How can we improve our service?</span> <span class="opt" data-i18n="optional">(optional)</span></label>
       <textarea id="improve" maxlength="500" data-i18n-ph="improvePh" placeholder="Your suggestions..."></textarea>
     </div>
 
@@ -405,9 +401,8 @@ const I18N = {
     q2: "\u{1F91D} 2. Did we treat you with respect and a smile?",
     q3: "⚡ 3. Were you served quickly?",
     q4: "❤️ 4. Would you visit us again?",
-    q5: "\u{1F44D} 5. Would you recommend us to your family and friends?",
-    q6: "\u{1F4AC} 7. How can we improve our service?",
-    q6nps: "\u{1F4CA} 6. How likely are you to recommend us to a friend or colleague?",
+    q6: "\u{1F4AC} 6. How can we improve our service?",
+    q6nps: "\u{1F4CA} 5. How likely are you to recommend us to a friend or colleague?",
     npsHint: "1 = Not at all likely · 10 = Extremely likely",
     optional: "(optional)",
     improvePh: "Your suggestions...",
@@ -421,8 +416,8 @@ const I18N = {
     errCivil: "Please enter a valid 12-digit Civil ID number.",
     errMobile: "Please enter a valid 8-digit mobile number.",
     errStars: "Please rate questions 1 and 2 before submitting.",
-    errChips: "Please answer questions 3, 4 and 5 before submitting.",
-    errNps: "Please answer question 6 before submitting.",
+    errChips: "Please answer questions 3 and 4 before submitting.",
+    errNps: "Please answer question 5 before submitting.",
     errSubmit: "Could not submit. Please check your connection and try again.",
     thanks: "Thank you!",
     successMsg: "Your feedback for {branch} has been recorded.\nWe appreciate you taking the time.",
@@ -444,9 +439,8 @@ const I18N = {
     q2: "\u{1F91D} 2. هل تعاملنا معك باحترام وابتسامة؟",
     q3: "⚡ 3. هل تمت خدمتك بسرعة؟",
     q4: "❤️ 4. هل ستزورنا مرة أخرى؟",
-    q5: "\u{1F44D} 5. هل تنصح عائلتك وأصدقاءك بالتعامل معنا؟",
-    q6: "\u{1F4AC} 7. كيف يمكننا تحسين خدمتنا؟",
-    q6nps: "\u{1F4CA} 6. ما مدى احتمال أن توصي بنا صديقاً أو زميلاً؟",
+    q6: "\u{1F4AC} 6. كيف يمكننا تحسين خدمتنا؟",
+    q6nps: "\u{1F4CA} 5. ما مدى احتمال أن توصي بنا صديقاً أو زميلاً؟",
     npsHint: "1 = غير محتمل إطلاقاً · 10 = محتمل جداً",
     optional: "(اختياري)",
     improvePh: "اقتراحاتكم...",
@@ -460,8 +454,8 @@ const I18N = {
     errCivil: "يرجى إدخال رقم مدني صحيح مكون من 12 رقماً.",
     errMobile: "يرجى إدخال رقم هاتف صحيح مكون من 8 أرقام.",
     errStars: "يرجى تقييم السؤالين 1 و2 قبل الإرسال.",
-    errChips: "يرجى الإجابة على الأسئلة 3 و4 و5 قبل الإرسال.",
-    errNps: "يرجى الإجابة على السؤال 6 قبل الإرسال.",
+    errChips: "يرجى الإجابة على السؤالين 3 و4 قبل الإرسال.",
+    errNps: "يرجى الإجابة على السؤال 5 قبل الإرسال.",
     errSubmit: "تعذر الإرسال. يرجى التحقق من الاتصال والمحاولة مرة أخرى.",
     thanks: "شكراً لك!",
     successMsg: "تم تسجيل تقييمكم لفرع {branch}.\nنشكركم على وقتكم.",
@@ -483,9 +477,8 @@ const I18N = {
     q2: "\u{1F91D} 2. क्या हमने आपके साथ सम्मान और मुस्कान से व्यवहार किया?",
     q3: "⚡ 3. क्या आपको जल्दी सेवा मिली?",
     q4: "❤️ 4. क्या आप हमारे पास फिर आएँगे?",
-    q5: "\u{1F44D} 5. क्या आप अपने परिवार और दोस्तों को हमारी सिफारिश करेंगे?",
-    q6: "\u{1F4AC} 7. हम अपनी सेवा कैसे बेहतर बना सकते हैं?",
-    q6nps: "\u{1F4CA} 6. आप हमें किसी मित्र या सहकर्मी को सुझाने की कितनी संभावना रखते हैं?",
+    q6: "\u{1F4AC} 6. हम अपनी सेवा कैसे बेहतर बना सकते हैं?",
+    q6nps: "\u{1F4CA} 5. आप हमें किसी मित्र या सहकर्मी को सुझाने की कितनी संभावना रखते हैं?",
     npsHint: "1 = बिल्कुल नहीं · 10 = पूरी संभावना",
     optional: "(वैकल्पिक)",
     improvePh: "आपके सुझाव...",
@@ -499,8 +492,8 @@ const I18N = {
     errCivil: "कृपया 12 अंकों की सही सिविल आईडी दर्ज करें।",
     errMobile: "कृपया 8 अंकों का सही मोबाइल नंबर दर्ज करें।",
     errStars: "कृपया भेजने से पहले प्रश्न 1 और 2 को रेट करें।",
-    errChips: "कृपया भेजने से पहले प्रश्न 3, 4 और 5 के उत्तर दें।",
-    errNps: "कृपया भेजने से पहले प्रश्न 6 का उत्तर दें।",
+    errChips: "कृपया भेजने से पहले प्रश्न 3 और 4 के उत्तर दें।",
+    errNps: "कृपया भेजने से पहले प्रश्न 5 का उत्तर दें।",
     errSubmit: "भेजा नहीं जा सका। कृपया कनेक्शन जाँचें और पुनः प्रयास करें।",
     thanks: "धन्यवाद!",
     successMsg: "{branch} शाखा के लिए आपका फीडबैक दर्ज कर लिया गया है।\nसमय देने के लिए धन्यवाद।",
@@ -522,9 +515,8 @@ const I18N = {
     q2: "\u{1F91D} 2. আমরা কি আপনার সাথে সম্মান ও হাসিমুখে আচরণ করেছি?",
     q3: "⚡ 3. আপনি কি দ্রুত সেবা পেয়েছেন?",
     q4: "❤️ 4. আপনি কি আবার আমাদের কাছে আসবেন?",
-    q5: "\u{1F44D} 5. আপনি কি পরিবার ও বন্ধুদের আমাদের কথা বলবেন?",
-    q6: "\u{1F4AC} 7. আমরা কীভাবে আমাদের সেবা আরও ভালো করতে পারি?",
-    q6nps: "\u{1F4CA} 6. আপনি কোনো বন্ধু বা সহকর্মীকে আমাদের সুপারিশ করার সম্ভাবনা কতটা?",
+    q6: "\u{1F4AC} 6. আমরা কীভাবে আমাদের সেবা আরও ভালো করতে পারি?",
+    q6nps: "\u{1F4CA} 5. আপনি কোনো বন্ধু বা সহকর্মীকে আমাদের সুপারিশ করার সম্ভাবনা কতটা?",
     npsHint: "1 = একেবারেই না · 10 = খুবই সম্ভব",
     optional: "(ঐচ্ছিক)",
     improvePh: "আপনার পরামর্শ...",
@@ -538,8 +530,8 @@ const I18N = {
     errCivil: "অনুগ্রহ করে 12 সংখ্যার সঠিক সিভিল আইডি দিন।",
     errMobile: "অনুগ্রহ করে 8 সংখ্যার সঠিক মোবাইল নম্বর দিন।",
     errStars: "পাঠানোর আগে প্রশ্ন 1 ও 2 রেট করুন।",
-    errChips: "পাঠানোর আগে প্রশ্ন 3, 4 ও 5 এর উত্তর দিন।",
-    errNps: "পাঠানোর আগে প্রশ্ন 6 এর উত্তর দিন।",
+    errChips: "পাঠানোর আগে প্রশ্ন 3 ও 4 এর উত্তর দিন।",
+    errNps: "পাঠানোর আগে প্রশ্ন 5 এর উত্তর দিন।",
     errSubmit: "পাঠানো যায়নি। সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।",
     thanks: "ধন্যবাদ!",
     successMsg: "{branch} শাখার জন্য আপনার ফিডব্যাক সংরক্ষণ করা হয়েছে।\nসময় দেওয়ার জন্য ধন্যবাদ।",
@@ -561,9 +553,8 @@ const I18N = {
     q2: "\u{1F91D} 2. අපි ඔබට ගෞරවයෙන් සහ සිනහවෙන් සැලකුවාද?",
     q3: "⚡ 3. ඔබට ඉක්මනින් සේවාව ලැබුණාද?",
     q4: "❤️ 4. ඔබ නැවත අප වෙත එනවාද?",
-    q5: "\u{1F44D} 5. ඔබේ පවුලේ අයට සහ මිතුරන්ට අපව නිර්දේශ කරනවාද?",
-    q6: "\u{1F4AC} 7. අපේ සේවාව වැඩිදියුණු කරන්නේ කෙසේද?",
-    q6nps: "\u{1F4CA} 6. මිතුරෙකුට හෝ සගයෙකුට අපව නිර්දේශ කිරීමට ඔබ කොතරම් ඉඩ තිබේද?",
+    q6: "\u{1F4AC} 6. අපේ සේවාව වැඩිදියුණු කරන්නේ කෙසේද?",
+    q6nps: "\u{1F4CA} 5. මිතුරෙකුට හෝ සගයෙකුට අපව නිර්දේශ කිරීමට ඔබ කොතරම් ඉඩ තිබේද?",
     npsHint: "1 = කිසිසේත් නැත · 10 = ඉතා ඉඩ ඇත",
     optional: "(අත්‍යවශ්‍ය නොවේ)",
     improvePh: "ඔබේ යෝජනා...",
@@ -577,8 +568,8 @@ const I18N = {
     errCivil: "කරුණාකර ඉලක්කම් 12ක නිවැරදි සිවිල් හැඳුනුම්පත් අංකය ඇතුළත් කරන්න.",
     errMobile: "කරුණාකර ඉලක්කම් 8ක නිවැරදි ජංගම අංකය ඇතුළත් කරන්න.",
     errStars: "යැවීමට පෙර ප්‍රශ්න 1 සහ 2 අගයන්න.",
-    errChips: "යැවීමට පෙර ප්‍රශ්න 3, 4 සහ 5 ට පිළිතුරු දෙන්න.",
-    errNps: "යැවීමට පෙර ප්‍රශ්න 6 ට පිළිතුරු දෙන්න.",
+    errChips: "යැවීමට පෙර ප්‍රශ්න 3 සහ 4 ට පිළිතුරු දෙන්න.",
+    errNps: "යැවීමට පෙර ප්‍රශ්න 5 ට පිළිතුරු දෙන්න.",
     errSubmit: "යැවිය නොහැක. සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
     thanks: "ස්තූතියි!",
     successMsg: "{branch} ශාඛාව සඳහා ඔබේ ප්‍රතිචාරය සටහන් විය.\nකාලය ගත කිරීම ගැන ස්තූතියි.",
@@ -677,11 +668,10 @@ buildStars("happy");
 buildStars("respect");
 
 /* ---------- Choice chips (points: best 5, middle 3, worst 1) ---------- */
-const choices = { speed: 0, visit: 0, recommend: 0 };
+const choices = { speed: 0, visit: 0 };
 const chipMeta = {
   speed: {box: "speedChips", options: [ {key:"fast", value:5}, {key:"average", value:3}, {key:"slow", value:1} ]},
-  visit: {box: "visitChips", options: [ {key:"yes", value:5}, {key:"maybe", value:3}, {key:"no", value:1} ]},
-  recommend: {box: "recommendChips", options: [ {key:"yes", value:5}, {key:"maybe", value:3}, {key:"no", value:1} ]}
+  visit: {box: "visitChips", options: [ {key:"yes", value:5}, {key:"maybe", value:3}, {key:"no", value:1} ]}
 };
 
 function buildChips(key){
@@ -802,7 +792,7 @@ form.addEventListener("submit", async (e) => {
     err.textContent = t("errStars");
     return;
   }
-  if(!choices.speed || !choices.visit || !choices.recommend){
+  if(!choices.speed || !choices.visit){
     err.textContent = t("errChips");
     return;
   }
@@ -829,7 +819,6 @@ form.addEventListener("submit", async (e) => {
     respect: state.respect,
     speed: choices.speed,
     visitAgain: choices.visit,
-    recommend: choices.recommend,
     nps: npsValue,
     improve: document.getElementById("improve").value.trim()
   };
