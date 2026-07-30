@@ -7,7 +7,7 @@
  *
  * Sheet1 headers (row 1), in this exact order:
  *   Timestamp | Branch | Civil ID | Mobile | Happy | Respect | Speed |
- *   Visit Again | Recommend | Improvement
+ *   Visit Again | Recommend | NPS | Improvement
  *
  * Sheet2 layout: A1 = "Branch" (header), A2..An = one branch name per row.
  *
@@ -33,6 +33,7 @@ function doPost(e) {
     Number(data.speed) || "",
     Number(data.visitAgain) || "",
     Number(data.recommend) || "",
+    isNaN(Number(data.nps)) || data.nps === "" || data.nps === null || data.nps === undefined ? "" : Number(data.nps),
     data.improve || ""
   ]);
 
